@@ -253,6 +253,19 @@ FLOW OK: 62 проверок
 
 ## Деплой
 
+### Amvera Cloud
+
+Пошаговая инструкция: [`DEPLOY_AMVERA.md`](DEPLOY_AMVERA.md).
+
+Коротко:
+
+1. Создай приложение в Amvera и скопируй Git URL проекта.
+2. Запусти `deploy_amvera.bat` и вставь этот URL.
+3. Добавь переменные окружения в Amvera: `BOT_TOKEN`, `ADMIN_IDS`, `PAYMENT_SECRET`, `PRICE_STARS`, `TIMEZONE`, `LOG_LEVEL`, `BRAND`, `PYTHONUNBUFFERED`.
+4. Останови локальный бот и запусти облачный.
+
+Для Amvera уже готовы `Dockerfile`, `amvera.yml` и постоянное хранилище `/data`.
+
 ### Docker
 
 ```bash
