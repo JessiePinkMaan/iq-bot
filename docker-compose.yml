@@ -1,0 +1,11 @@
+services:
+  noema-bot:
+    build: .
+    container_name: noema-iq-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/data
+      - ./logs:/app/logs
+    command: python run.py
