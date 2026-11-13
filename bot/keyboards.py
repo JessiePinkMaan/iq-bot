@@ -24,7 +24,7 @@ def main_menu(
 ) -> InlineKeyboardMarkup:
     rows: list[list[InlineKeyboardButton]] = []
     if active_index is None:
-        rows.append([_button("🧠  Начать тестирование", "test:new")])
+        rows.append([_button("▶️  Старт", "test:new")])
     else:
         rows.append([_button(f"▶️  Продолжить · {active_index + 1} / 20", "test:continue")])
         rows.append([_button("🔄  Начать заново", "test:reset")])
@@ -84,7 +84,7 @@ def details_keyboard(test_id: int, price: int) -> InlineKeyboardMarkup:
 def about_keyboard() -> InlineKeyboardMarkup:
     return _markup(
         [
-            [_button("🧠  Начать тестирование", "test:new")],
+            [_button("▶️  Старт", "test:new")],
             [_button("🏠  В меню", "menu:home")],
         ]
     )
